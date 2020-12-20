@@ -1,0 +1,352 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+    scroll-behavior: smooth;
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+}
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+}
+#cssmenu:after,
+#cssmenu>ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+    display: none;
+  }
+  #cssmenu {
+    font-family: Montserrat, sans-serif;
+    background: #333333;
+    width: 100vw;
+}
+  #cssmenu>ul>li {
+    float: left;
+  }
+  #cssmenu>ul>li>a {
+    padding: 17px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: color .25s ease;
+    -moz-transition: color .25s ease;
+    transition: color .25s ease;
+  }
+  #cssmenu>ul>li:hover>a {
+    color: #ffffff;
+  }
+  #cssmenu>ul>li.has-sub>a {
+    padding-right: 30px;
+  }
+  #cssmenu ul>li.has-sub>a:after {
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #dddddd;
+    content: '';
+    -webkit-transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    transition: background .25s ease;
+  }
+  #cssmenu>ul>li.has-sub:hover>a:after,
+  #cssmenu>ul>li.has-sub>a:hover:after {
+    background: #ffffff;
+  }
+  #cssmenu ul>li.has-sub>a:before {
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #dddddd;
+    content: '';
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  #cssmenu ul>li.has-sub:hover>a:before,
+  #cssmenu ul>li.has-sub>a:hover:before {
+    top: 23px;
+    height: 0;
+}
+#cssmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+  #cssmenu li:hover>ul {
+    left: auto;
+}
+  #cssmenu ul ul ul {
+      margin-left: 100%;
+    top: 0;
+}
+#cssmenu ul ul li {
+    height: 0;
+    -webkit-transition: height .25s ease;
+    -moz-transition: height .25s ease;
+    transition: height .25s ease;
+  }
+  
+  #cssmenu li:hover>ul>li {
+    height: 35px;
+}
+  #cssmenu ul ul li a {
+      width: 170px;
+      padding: 11px 15px;
+      border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+      font-size: 12px;
+      text-decoration: none;
+      color: #dddddd;
+      font-weight: 400;
+      background: #333333;
+    }
+    .navbar {
+        position: fixed;
+        z-index: 1;
+        opacity: 0.8;
+    }
+    #nav_logo {
+        margin-left: 95vw;
+        margin-top: -3%;
+    }        
+    #logo {
+    
+       height: 7vh;
+       width: 3vw;
+    }              
+    .background {
+        
+        overflow: hidden;
+        position: relative;
+        justify-content: center;
+        display: flex;
+        
+  }
+  #back_image {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;  
+    }
+    .child-div {
+      font-size: 5vh;
+      font-weight: 100;
+      color: rgb(48, 42, 42);
+      font-family: 'Fredericka the Great', cursive;  
+      position: absolute;     
+      text-shadow: 5px 5px 2px grey;
+      margin-top: 15vh;
+      transition: text-indent 0.5s;
+      animation: glow 3s infinite;
+    }
+      @keyframes glow {
+        0% {
+          text-shadow:  0 0 10px rgb(44, 37, 37);
+        }
+        
+        15% {
+          text-shadow: 2px 2px 10px rgba(255, 255, 255, 1),
+                       -2px -2px 10px rgba(255, 255, 255, 1);
+        }
+        30% {
+          text-shadow: 2px 2px 4px rgba(255, 255, 255, .7),
+                       -2px -2px 4px rgba(255, 255, 255, .7);
+        }
+        50% {
+          text-shadow: 20px 20px 50px rgba(255, 255, 255, .5),
+                       -20px -20px 50px rgba(14, 13, 13, 0.5);
+        }
+      }
+      
+    .background:hover {
+        text-indent: 5px;
+        transition: text-indent 0.25s;
+    }
+    .child-div:hover::before {
+        display: inline-block;
+    } 
+    #child-div2 {
+        font-size: 5vh;
+        font-weight: 100;
+        font-family: 'Fredericka the Great', cursive;
+        position: absolute;     
+        text-shadow: 5px 5px 2px grey;
+        margin-top: 20vh;
+        color: rgb(48, 42, 42);
+        transition: text-indent 0.5s;
+        animation: glow 3s infinite;
+  
+      }
+  
+    #mid {
+        background-color: rgb(216, 208, 216);
+        padding: 5vh;
+    }
+    #head {
+        font-size: 6vh;
+        font-weight: 100;
+        font-family: cursive;   
+        margin-top: 4vh;
+    }
+    .line {
+        background-color: rgb(116, 34, 218);
+        height: 0.5vh;
+        width: 5vw;
+    }
+    #ques {
+        font-size: 3vh;
+        font-weight: 100;
+        font-family: cursive;   
+        margin-top: 2vh;        
+    }
+    #ans {
+        color: rgb(70, 66, 66);
+        font-size: 2.5vh;
+        font-family: cursive;
+    }
+    #know {
+        text-align: center;
+        font-family: 'Nova Flat', cursive;
+        font-size: 6vh;
+        flex-wrap: wrap;
+    }
+    .container1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    @media (max-width: 800px) {
+        .container1 {
+            flex-direction: column;
+        }
+    }
+    .box {
+        padding: 0% 1.5vw;
+        justify-content: center;
+        font-family: 'Nova Flat', cursive;
+        font-size: 3.5vh;
+    }
+    #box1, #box2, #box3 {
+        text-align: center;
+    }
+    .know_text {
+        font-size: 15px;
+        font-family: cursive;
+        color: rgb(70, 66, 66);
+        letter-spacing: 1.5px;
+    }
+    .btn  a{
+     text-decoration: none;   
+    color: seagreen;
+    }
+    .btn a:hover {
+        color:darkslategrey;
+        text-decoration: underline;
+    }
+    
+    .footer {
+        background-color: rgb(252, 252, 220);
+        justify-content: center;
+    }
+    #feedback {
+        font-size: 6vh;
+        font-weight: 100;
+        font-family: cursive;  
+        text-align: center; 
+        
+    }
+    #feed_mid {
+        font-family: 'Nova Flat', cursive;
+        font-size: 3.5vh;
+        text-align: center;
+    }
+    #end {
+        font-size: 15px;
+        font-family: cursive;
+        color: rgb(70, 66, 66);
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+    #bottom {
+        height: 10vh;
+        width: 20vw;
+        border-radius: 8px;
+    }
+    #bttn{
+        text-align: center;
+        padding: 5px 5px;
+        height: 5vh;
+        width: 15vw;
+        border-radius: 5px;
+        border-color:  rgb(241, 241, 241, 241);
+        background-color: rgb(221, 173, 84);
+        font-family: 'Kaushan Script', cursive;
+    }
+    #bttn a {
+        color: white;
+        text-decoration: none;
+        font-size: 2.2vh;
+    }
+    #submit {
+        text-align: center;
+    }
+    #footer {
+        text-align: center;
+        background-color: rgba(42,157,143,0.3);
+        color: rgb(110, 106, 106);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5vh;
+    }
+    #feed_text {
+      width: 50%;
+
+    }
+    .botText {
+      font-family: 'Fredericka the Great', cursive;  
+      font-weight: bolder;
+      text-align: left;
+    }
+    #textInput {
+      width: 20%;
+      text-align: left;
+      height: 50%;
+    }
+    #buttonInput {
+      border-radius: 5px;
+      border-color:  rgb(241, 241, 241, 241);
+      background-color: rgb(221, 173, 84);
+      font-family: 'Kaushan Script', cursive;
+    }
+    #chat {
+      
+    }

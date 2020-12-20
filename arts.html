@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Pacifico&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+
+
+</head>
+
+<style>
+
+a {
+        text-decoration: none;
+        color: aliceblue;
+    }
+
+    a:hover {
+        color: rgb(5, 51, 51);
+        padding: 7px 7px;
+    }
+
+
+    body {
+        margin: 0px 0px;
+        overflow-x: hidden;
+        min-width: 100%;
+        background-color: rgb(228, 255, 246);
+    }
+
+    .navbar {
+        /* border: 2px black solid; */
+        overflow: auto;
+        background-image: url(lounom160300045.jpg);
+        background-size: 100% 100%;
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+
+    .navbar ul {
+        overflow: auto;
+        width: 60%;
+        float: right;
+    }
+
+    .navbar li {
+        display: inline-block;
+        /* border: 2px solid red; */
+        margin: 0vh 1vh;
+        padding: 1vh 1vw;
+        font-family: 'Acme', sans-serif;
+        font-size: 2vh;
+        text-transform: uppercase;
+        float: right;
+        color: aliceblue;
+    }
+
+    .navbar li:hover {
+        background-color: rgb(217, 213, 219);
+        color: black;
+        zoom: 110%;
+        cursor: pointer;
+        box-shadow: 10px 10px 5px grey;
+        border-radius: 5px;
+        font-size: 2.2vh;
+    }
+
+
+
+    /* .navbar li a {} */
+
+    .img1 {
+        /* border: 2px black solid; */
+        width: 100px;
+        height: 100px;
+        margin: .7vh 1vw;
+    }
+
+    .img1:hover {
+        margin: 1vh 1vw;
+        cursor: pointer;
+        background-color: thistle;
+        border-radius: 50px;
+    }
+
+    .searchbox {
+        overflow: hidden;
+        /* border: 2px white solid; */
+        display: flex;
+        width: 40%;
+        margin: 7vh auto;
+        display: grid;
+        grid-template-columns: 1fr 8fr;
+    }
+
+    input {
+        height: 45px;
+        font-size: 3vh;
+        margin: .5vh 1vw;
+    }
+
+    .fas {
+        color: aliceblue;
+        margin: 1vh 1vw;
+        font-size: 4.5vh;
+    }
+
+
+    .commerce {
+        width: 400px;
+        margin: 4vh auto;
+        /* border: 2px black solid; */
+        height: 200px;
+        padding: 1vh 1vw;
+    }
+
+    .img2 {
+        display: block;
+        width: 100%;
+        height: 100%;
+        box-shadow: 15px 15px 10px violet;
+        border-radius: 10px;
+    }
+
+    .info {
+        font-weight: bolder;
+        font-family: 'Langar', cursive;
+        margin: 6vh auto;
+        text-align: center;
+        font-size: 3vh;
+        background-color: rgb(25, 29, 29);
+        color: aliceblue;
+        letter-spacing: 4px;
+    }
+
+    .grid1 {
+        display: grid;
+        /* border: 2px solid red; */
+        height: 80vh;
+        margin: 4vh 5vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1vw;
+    }
+
+    .items {
+        border: 2px black solid;
+        height: 80vh;
+
+    }
+
+    .container {
+        /* border: 2px solid black; */
+        margin: 4vh 10vw;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 150px 150px 150px;
+        grid-gap: 1rem;
+        padding: 1em;
+        grid-auto-flow: dense;
+    }
+
+    .gallery-item {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .gallery-item .image {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        box-shadow: 10px 10px 8px grey;
+    }
+
+    .gallery-item .image:hover {
+        box-shadow: 10px 10px 5px grey;
+    }
+
+    .gallery-item .image #imgs {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        cursor: pointer;
+        transition: .5s ease-in-out;
+    }
+
+    .gallery-item:hover .image #imgs {
+        transform: scale(1.5);
+    }
+
+    .gallery-item .text {
+        opacity: .5;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        font-family: 'Courgette', cursive;
+        font-size: 3vh;
+        pointer-events: none;
+        z-index: 4;
+        transition: .3s ease-in-out;
+
+    }
+
+    .gallery-item:hover .text {
+        opacity: 1;
+        animation: move-down 3s linear;
+        padding: 1em;
+        width: 100%;
+        /* outline: 2px solid red; */
+
+    }
+
+    .w-1 {
+        grid-row: span 2;
+    }
+
+    .w-2 {
+        grid-row: span 2;
+    }
+
+    .w-3 {
+        grid-row: span 2;
+    }
+
+
+
+    @media (max-width:1000px) {
+        .container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 100px 100px 100px;
+        }
+
+        .w-1 {
+            grid-row: span 1;
+        }
+
+        .w-2 {
+            grid-row: span 1;
+        }
+
+        .w-3 {
+            grid-row: span 1;
+        }
+
+    }
+
+    @media (max-width:600px) {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
+
+            grid-auto-rows: 80px 80px 80px;
+        }
+    }
+
+    @keyframes move-down {
+
+        0% {
+            top: 10%;
+        }
+
+        50% {
+            top: 25%;
+        }
+
+        100% {
+            top: 40%;
+        }
+    }
+
+
+
+    @media (max-width: 1000px) {
+
+        .img1 {
+            height: 60px;
+            width: 60px;
+        }
+
+        .commerce {
+            width: 250px;
+            margin: 4vh auto;
+            /* border: 2px black solid; */
+            height: 150px;
+        }
+
+        .searchbox {
+            width: 40%;
+            margin: 0vh auto;
+            height: 50px;
+            padding: 1vh 0vw;
+        }
+
+        input {
+            height: 40px;
+            font-size: 2vh;
+        }
+
+        .fas {
+            color: aliceblue;
+            margin: auto;
+            font-size: 4vh;
+        }
+
+
+
+        .footer .COLLEGE {
+            /* border: 2px black solid; */
+            width: 50%;
+            margin: 1vh 1vw;
+            padding: 1vh 1vw;
+        }
+
+
+        .footer .COLLEGE h1 {
+            font-size: 2vh;
+
+        }
+
+
+    }
+
+    @media screen and (max-width: 600px) {
+        body {
+
+            margin: auto;
+        }
+
+
+        .commerce {
+            width: 150px;
+            margin: 4vh auto;
+            /* border: 2px black solid; */
+            height: 80px;
+            padding: 1vh 1vw;
+        }
+
+        .info {
+            font-size: 2vh;
+        }
+
+        .searchbox {
+            position: relative;
+            width: 40%;
+            height: 50px;
+        }
+
+        input {
+            height: 40px;
+            font-size: 3vh;
+        }
+
+        .fas {
+            color: aliceblue;
+            font-size: 3vh;
+        }
+
+        input {
+            width: 60%;
+            -webkit-transition: width 0.4s ease-in-out;
+            transition: width 0.4s ease-in-out;
+        }
+
+        /* When the input field gets focus, change its width to 100% */
+        input:focus {
+            width: 100%;
+        }
+
+
+
+    }
+
+    @media screen and (max-width: 400px) {
+        body {
+
+            margin: auto;
+        }
+
+        .commerce {
+            width: 120px;
+            margin: 4vh auto;
+            /* border: 2px black solid; */
+            height: 80px;
+            padding: 1vh 1vw;
+        }
+
+    }
+
+
+
+    .footer {
+        overflow: hidden;
+        display: flex;
+        /* border: 2px black solid; */
+        margin: auto;
+        background-color: rgb(24, 24, 131);
+        color: white;
+        padding: 2vh 2vw;
+        line-height: 3rem;
+        font-size: 2vh;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer .COLLEGE {
+        /* border: 2px black solid; */
+        width: 28%;
+        margin: 1vh 1vw;
+        padding: 1vh 1vw;
+    }
+
+
+    .footer .COLLEGE h1 {
+        font-size: 3vh;
+        text-decoration: underline;
+    }
+
+
+    .footer a{
+        text-decoration: none;
+        
+    }
+    .footer a:hover{
+        zoom: 105%;
+        color: #7c828f;
+    }
+
+
+
+
+
+
+
+
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 600px;
+        position: relative;
+        margin: auto;
+    }
+
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text {
+        color: black;
+        font-size: 4vh;
+        font-weight: bold;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active,
+    .dot:hover {
+        background-color: #717171;
+    }
+
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+
+        .prev,
+        .next,
+        .text {
+            font-size: 11px
+        }
+    }
+
+
+    #pratzz {
+        width: 100%;
+        display: block;
+        margin: auto;
+
+        box-shadow: 5px 5px 10px grey;
+        border-radius: 10px;
+    }
+</style>
+
+
+
+<body>
+
+
+    <script type="text/javascript" src="main.js"></script>
+
+
+    <header class="navbar_nav">
+        <nav class="navbar">
+            <a href="home_page.php">
+                <img src="Screenshot_2020-12-18-13-00-26_2-removebg-preview.png" alt="logo.png" class="img1"></a>
+
+            <ul>
+                <li> <a href="about.htm"> about us </a></li>
+                <li> <a href="#"> services</a></li>
+                <li> <a href="contact.html"> contact us</a></li>
+                <li> <a href="#"> exams</a></li>
+                <li> <a href="news.htm"> news</a></li>
+                <li> <a href="#"> colleges</a></li>
+            </ul>
+            <div class="searchbox">
+                <i class="fas fa-search  fa-3x "></i>
+                <input type="search" name="search" id="search" placeholder="search your college">
+            </div>
+        </nav>
+
+
+        <div class="commerce">
+            <img src="arts.jpg" alt="commerce logo" class="img2">
+        </div>
+
+        <div class="info">
+            TAKE &nbsp;&nbsp;&nbsp; INFORMED &nbsp;&nbsp;&nbsp; DECISIONS
+        </div>
+
+
+        <div class="container">
+
+            <div class="gallery-container w-1 ">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="stephens.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Colleges</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="cut.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Cutoff</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-container w-2">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="exam.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Examinations</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-container w-3">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="news.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">News</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-container ">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="tools.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Tools</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="forum.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Forum</div>
+                    </a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="info">
+            TOP HUMANITIES COLLEGES IN INDIA
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1/5</div>
+                <img src="dy.jpg" id="pratzz">
+                <div class="text">LADY SHRI RAM COLLEGE FOR WOMEN</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2/5</div>
+                <img src="stephens.jpg" id="pratzz">
+                <div class="text">ST. STEPHEN'S COLLEGE</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3/5</div>
+                <img src="crhrist.jpg" id="pratzz">
+                <div class="text">CHRIST UNIVERSITY</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4/5</div>
+                <img src="xaviers.jpg" id="pratzz">
+                <div class="text">ST. XAVIERS COLLEGE,KOLKATA</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5/5</div>
+                <img src="gergusson.jpg" id="pratzz">
+                <div class="text">GERSUSSON UNIVERSITY</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </header>
+
+    <footer class="footer">
+        <div class="COLLEGE">
+            <h1>COLLEGE</h1><br>
+           <a href="#"> statewise colleges </a><br>
+           <a href="#"> city-wise colleges </a><br>
+           <a href="#"> stream-wise colleges </a><br>
+           <a href="#"> government colleges</a> <br>
+           <a href="#"> private colleges </a><br>
+        </div>
+        <div class="COLLEGE">
+            <h1>EXAMS</h1><br>
+           <a href="#"> IAS </a><br>
+           <a href="#"> SSC </a><br>
+           <a href="#"> JEE(Advanced)</a> <br>
+
+        </div>
+        <div class="COLLEGE">
+            <h1>COMPANY</h1><br>
+           <a href="#"> about us </a><br>
+           <a href="#"> media kit </a><br>
+           <a href="#"> privacy policy</a> <br>
+           <a href="#"> contact us</a><br>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>
