@@ -1,0 +1,345 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+    scroll-behavior: smooth;
+}
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  
+}
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+}
+#cssmenu:after,
+#cssmenu>ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu #menu-button {
+    display: none;
+  }
+  #cssmenu {
+    font-family: Montserrat, sans-serif;
+    background: #333333;
+    width: 100vw;
+}
+  #cssmenu>ul>li {
+    float: left;
+  }
+  #cssmenu>ul>li>a {
+    padding: 17px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-transition: color .25s ease;
+    -moz-transition: color .25s ease;
+    transition: color .25s ease;
+  }
+  #cssmenu>ul>li:hover>a {
+    color: #ffffff;
+  }
+  #cssmenu>ul>li.has-sub>a {
+    padding-right: 30px;
+  }
+  #cssmenu ul>li.has-sub>a:after {
+    position: absolute;
+    top: 22px;
+    right: 11px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #dddddd;
+    content: '';
+    -webkit-transition: background .25s ease;
+    -moz-transition: background .25s ease;
+    transition: background .25s ease;
+  }
+  #cssmenu>ul>li.has-sub:hover>a:after,
+  #cssmenu>ul>li.has-sub>a:hover:after {
+    background: #ffffff;
+  }
+  #cssmenu ul>li.has-sub>a:before {
+    position: absolute;
+    top: 19px;
+    right: 14px;
+    display: block;
+    width: 2px;
+    height: 8px;
+    background: #dddddd;
+    content: '';
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  #cssmenu ul>li.has-sub:hover>a:before,
+  #cssmenu ul>li.has-sub>a:hover:before {
+    top: 23px;
+    height: 0;
+}
+#cssmenu ul ul {
+    position: absolute;
+    left: -9999px;
+}
+  #cssmenu li:hover>ul {
+    left: auto;
+}
+  #cssmenu ul ul ul {
+      margin-left: 100%;
+    top: 0;
+}
+#cssmenu ul ul li {
+    height: 0;
+    -webkit-transition: height .25s ease;
+    -moz-transition: height .25s ease;
+    transition: height .25s ease;
+  }
+  
+  #cssmenu li:hover>ul>li {
+    height: 35px;
+}
+  #cssmenu ul ul li a {
+      width: 170px;
+      padding: 11px 15px;
+      border-bottom: 1px solid rgba(150, 150, 150, 0.15);
+      font-size: 12px;
+      text-decoration: none;
+      color: #dddddd;
+      font-weight: 400;
+      background: #333333;
+    }
+    .navbar {
+        position: fixed;
+        z-index: 1;
+        opacity: 0.8;
+    }
+    #nav_logo {
+        margin-left: 95vw;
+        margin-top: -3%;
+    }        
+    #logo {
+    
+       height: 7vh;
+       width: 3vw;
+    }              
+  .items {
+      border: 2px black solid;
+      height: 80vh;
+
+  }
+
+  .container {
+      /* border: 2px solid black; */
+      margin: 4vh 10vw;
+      text-align: center;
+  }
+
+  .gallery-item {
+      width: 100%;
+      height: 100%;
+      position: relative;
+  }
+
+  .gallery-item .image {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      box-shadow: 10px 10px 8px grey;
+  }
+
+  .gallery-item .image:hover {
+      box-shadow: 10px 10px 5px grey;
+  }
+
+  .gallery-item .image #imgs {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      cursor: pointer;
+      transition: .5s ease-in-out;
+  }
+
+  .gallery-item:hover .image #imgs {
+      transform: scale(1.5);
+  }
+
+  .gallery-item .text {
+      opacity: .5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      font-family: 'Courgette', cursive;
+      font-size: 3vh;
+      pointer-events: none;
+      z-index: 4;
+      transition: .3s ease-in-out;
+
+  }
+
+  .gallery-item:hover .text {
+      opacity: 1;
+      animation: move-down 3s linear;
+      width: 100%;
+      /* outline: 2px solid red; */
+
+  }
+  #footer {
+    text-align: center;
+    background-color: rgba(42,157,143,0.3);
+    color: rgb(110, 106, 106);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5vh;
+}
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: black;
+  font-size: 4vh;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+      opacity: .4
+  }
+
+  to {
+      opacity: 1
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+  .prev,
+  .next,
+  .text {
+      font-size: 11px
+  }
+}
+
+
+#pratzz {
+  width: 100%;
+  display: block;
+  margin: auto;
+
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 10px;
+}
+.text {
+  font-family: 'Fredericka the Great', cursive;
+  color: white;
+}
+
+
+
+
+
+

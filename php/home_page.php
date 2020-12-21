@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career hub</title>
-    <link rel= "icon" href="images\logo.png">
+    <link rel= "icon" href="../images/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 } 
 ?>
 
-<link rel= "stylesheet" href = "home.css">
+<link rel= "stylesheet" href = "../css/home.css">
 <body>
     <div class= "navbar">
     <div id='cssmenu'>  
@@ -45,17 +45,17 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
               <ul>
                  <li><a href='#'>Commerce</a>
                     <ul>
-                       <li><a href='com.html'>With maths</a></li>
-                       <li><a href='com.html'>Without maths</a></li>
+                       <li><a href='../html/com.html'>With maths</a></li>
+                       <li><a href='../html/com.html'>Without maths</a></li>
                     </ul>
                  </li>
-                 <li><a href='arts.html'>Humanities</a>
+                 <li><a href='../html/arts_page.html'>Humanities</a>
                  </li>
               </ul>
            </li>
-           <li><a href="about.htm" class="list-group-item"><i class="fa fa-info"></i> About</a></li>
-           <li><a href="contact.html" class="list-group-item"><i class="fa fa-phone"></i> Contact</a></li>
-           <li><a href="news.htm" class="list-group-item"><i class="fa fa-newspaper-o"></i> News</a></li>
+           <li><a href="../html/about.htm" class="list-group-item"><i class="fa fa-info"></i> About</a></li>
+           <li><a href="../html/contact.html" class="list-group-item"><i class="fa fa-phone"></i> Contact</a></li>
+           <li><a href="../html/news.htm" class="list-group-item"><i class="fa fa-newspaper-o"></i> News</a></li>
            <li> 
 
             <style>
@@ -204,12 +204,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
            </li>
         </ul>
         <div id="nav_logo">
-            <img src="images\logo.png" id="logo">
+            <img src="../images/logo.png" id="logo">
         </div>
      </div>  
     </div>
      <div class = "background">
-         <img src ="images\back_image.jpg" id= "back_image">
+         <img src ="../images/back_image.jpg" id= "back_image">
             <div class="child-div">
                Never dream for success,<br></div>
                <div id="child-div2"> Work for it</div>

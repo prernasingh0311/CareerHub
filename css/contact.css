@@ -149,3 +149,45 @@ body {
        height: 7vh;
        width: 3vw;
     }
+    .business{
+      /* border: 2px black solid; */
+      margin: 2vh auto;
+      padding: 2vh 2vw;
+      font-size: 3vh;
+      border-radius: 2px;
+      
+  }
+
+  .titlebusiness{
+      /* border: 2px black solid; */
+      margin: 2vh auto;
+      padding: 1vh 1vw;
+      font-size: 4vh;
+      color: aliceblue;
+      background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(12, 11, 11));
+      font-family: 'Fredericka the Great', cursive;  
+
+  }
+
+  .businesstext{
+      /* border: 2px black solid; */
+      margin: 2vh auto;
+      padding: 1vh 1vw;
+      font-style: italic;
+      color: white;
+  }
+
+  #fasx{
+      font-size: 4vh;
+      padding-left: 2vw;
+      padding-right: 2vw;
+      color: white;
+  }
+    .mail a {
+      color: gray;
+      text-decoration: none;  
+
+    }
+    body {
+      overflow: hidden;
+    }
