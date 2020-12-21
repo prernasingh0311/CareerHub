@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career hub</title>
+    <link rel= "icon" href="images\logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel= "stylesheet" href = "C:css\arts.css">
+
+</head>
+<body>
+    <div class= "navbar">
+        <div id='cssmenu'>  
+            <ul>
+               <li>
+                <a href="#" class="list-group-item"><i class="fa fa-home fa-fw"></i> Home</a>
+    
+               </li>
+               <li>
+                <a href="#" class="list-group-item"><i class="fa fa-book"></i> Stream</a>
+    
+                  <ul>
+                     <li><a href='#'>Commerce</a>
+                        <ul>
+                           <li><a href='com.html'>With maths</a></li>
+                           <li><a href='com.html'>Without maths</a></li>
+                        </ul>
+                     </li>
+                     <li><a href='arts.html'>Humanities</a>
+                     </li>
+                  </ul>
+               </li>
+               <li><a href="about.htm" class="list-group-item"><i class="fa fa-info"></i> About</a></li>
+               <li><a href="contact.html" class="list-group-item"><i class="fa fa-phone"></i> Contact</a></li>
+               <li><a href="news.htm" class="list-group-item"><i class="fa fa-newspaper-o"></i> News</a></li>
+               <li> 
+    
+                <style>
+                body {font-family: Arial, Helvetica, sans-serif;}
+                * {box-sizing: border-box;}
+                
+                /* Full-width input fields */
+                input[type=text], input[type=password] {
+                  width: 100%;
+                  padding: 15px;
+                  margin: 5px 0 22px 0;
+                  display: inline-block;
+                  border: none;
+                  background: #f1f1f1;
+                }
+                
+                /* Add a background color when the inputs get focus */
+                input[type=text]:focus, input[type=password]:focus {
+                  background-color: #ddd;
+                  outline: none;
+                }
+                
+                /* Set a style for all buttons */
+                button {
+                  background-color: black;
+                  color: white;
+                  padding: 14px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  cursor: pointer;
+                  opacity: 0.9;
+                }
+                
+                button:hover {
+                  opacity:1;
+                }
+                
+                /* Extra styles for the cancel button */
+                
+                /* Float cancel and signup buttons and add an equal width */
+                 .signupbtn {
+                  
+                  width: 50%;
+                }
+                
+                /* Add padding to container elements */
+                .container {
+                  padding: 16px;
+                  display: inline;
+                  justify-content: center;
+                }
+                
+                /* The Modal (background) */
+                .modal {
+                  display: none; /* Hidden by default */
+                  position: fixed; /* Stay in place */
+                  z-index: 1; /* Sit on top */
+                  left: 0;
+                  top: 0;
+                  width: 100%; /* Full width */
+                  height: 100%; /* Full height */
+                  overflow: auto; /* Enable scroll if needed */
+                  background-color: #474e5d;
+                  padding-top: 50px;
+                  justify-content: center;
+                  text-align: center;
+                }
+                
+                /* Modal Content/Box */
+                .modal-content {
+                  background-color: #fefefe;
+                  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                  border: 1px solid #888;
+                  width: 50%; /* Could be more or less, depending on screen size */
+                }
+                
+                /* Style the horizontal ruler */
+                hr {
+                  border: 1px solid #f1f1f1;
+                  margin-bottom: 25px;
+                }
+                 
+                /* The Close Button (x) */
+                .close {
+                  position: absolute;
+                  right: 35px;
+                  top: 15px;
+                  font-size: 40px;
+                  font-weight: bold;
+                  color: #f1f1f1;
+                }
+                
+                .close:hover,
+                .close:focus {
+                  color: #f44336;
+                  cursor: pointer;
+                }
+                
+                /* Clear floats */
+                .clearfix::after {
+                  content: "";
+                  clear: both;
+                  display: table;
+                }
+                
+                /* Change styles for cancel button and signup button on extra small screens */
+                @media screen and (max-width: 300px) {
+                  .cancelbtn, .signupbtn {
+                     width: 100%;
+                  }
+                }
+                </style>
+                <body>
+                
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+                
+                <div id="id01" class="modal">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                  <form class="modal-content" action="home_page.php" method="post">
+                    <div class="container">
+                      <label for="email"><b><br>Email</b></label>
+                      <input type="text" placeholder="Enter Email" name="email" required>
+                
+                      <label for="psw"><b><br>Phone Number</b></label>
+                      <input type="text" placeholder="Enter Phone Number" name="psw" required>      
+                        <button type="submit" class="signupbtn" action="home.php">Sign Up</button>
+                    </div>
+                  </form>
+                </div>
+                
+                <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                  if (event.target == modal) {
+                    modal.style.display = "none";
+                  }
+                }
+                </script>
+                
+                </body>
+                </html>
+                
+               </li>
+            </ul>
+            <div id="nav_logo">
+                <img src="images\logo.png" id="logo">
+            </div>
+         </div>  
+        </div>
+        <div class="container">
+
+            <div class="gallery-container w-1 ">
+                <div class="gallery-item">
+                    <a href="#">
+                        <div class="image">
+                            <img src="images\stephens.jpg" alt="" id="imgs">
+                        </div>
+                        <div class="text">Colleges</div>
+                    </a>
+                </div>
+            </div>
+            </div>
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1/5</div>
+                    <img src="images\dy.jpg" id="pratzz">
+                    <div class="text">LADY SHRI RAM COLLEGE FOR WOMEN</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">2/5</div>
+                    <img src="images\stephens.jpg" id="pratzz">
+                    <div class="text">ST. STEPHEN'S COLLEGE</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">3/5</div>
+                    <img src="images\crhrist.jpg" id="pratzz">
+                    <div class="text">CHRIST UNIVERSITY</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">4/5</div>
+                    <img src="images\xaviers.jpg" id="pratzz">
+                    <div class="text">ST. XAVIERS COLLEGE,KOLKATA</div>
+                </div>
+    
+                <div class="mySlides fade">
+                    <div class="numbertext">5/5</div>
+                    <img src="images\gergusson.jpg" id="pratzz">
+                    <div class="text">GERSUSSON UNIVERSITY</div>
+                </div>
+    
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+            </div>
+            <br>
+    
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+    
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+    
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+    
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+    
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+    
+
+            <br><br><br>
+        <div id="footer">
+            <br>
+            <i class="fa fa-at"></i> CareerHub
+        </div>
+
+</body>
+</html>
